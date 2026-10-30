@@ -301,10 +301,10 @@ update over sampled tokens:  ↓  ↓  ↓  ↓  ↓
 
 
 | Domain       | What we're verifying                                 | Typical verifier                                                                                                              | Main bottleneck                                 |
-| ------------ | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| Math         | Final answer or structured mathematical object | Answer extraction, canonicalization, symbolic equivalence, or reference comparison [@shao2024deepseekmath; @deepseekai2025r1] | Output contracts and normalization              |
-| Code         | Program, patch, or execution result            | Sandboxed tests, hidden tests, timeouts, and optional static checks [@le2022coderl; @shojaee2023ppocoder; @liu2023rltf]       | Test coverage and flaky infrastructure          |
-| Formal proof | Proof term, tactic trace, or proof state       | Proof-assistant kernel e.g. Lean [@xin2024deepseekprover; @xin2024deepseekproverv15]                                         | Search, decomposition, and formalization burden |
+| -------------- | ------------------------ | -------------------------------------- | ------------------------ |
+| Math[^ch2-math-verifiers] | Final answer or structured mathematical object | Answer extraction, canonicalization, symbolic equivalence, or reference comparison | Output contracts and normalization |
+| Code[^ch2-code-verifiers] | Program, patch, or execution result | Sandboxed tests, hidden tests, timeouts, and optional static checks | Test coverage and flaky infrastructure |
+| Formal proof[^ch2-proof-verifiers] | Proof term, tactic trace, or proof state | Proof-assistant kernel e.g. Lean | Search, decomposition, and formalization burden |
 
 ## Failure modes
 
@@ -313,3 +313,9 @@ update over sampled tokens:  ↓  ↓  ↓  ↓  ↓
 - A verifier can evaluate the wrong capability due to reward hacking.
 
 [^ch2-deepseek-r1-template]: DeepSeek-R1-Zero uses `<think>`/`<answer>` separators and applies task-specific response-shape constraints for reward parsing, including boxed final outputs when useful for deterministic math verification [@deepseekai2025r1].
+
+[^ch2-math-verifiers]: [@shao2024deepseekmath; @deepseekai2025r1].
+
+[^ch2-code-verifiers]: [@le2022coderl; @shojaee2023ppocoder; @liu2023rltf].
+
+[^ch2-proof-verifiers]: [@xin2024deepseekprover; @xin2024deepseekproverv15].
