@@ -74,7 +74,7 @@ If the model deviates from the output contract e.g. omits `<answer>...</answer>`
 ![](../diagrams/02-answer-normalization-light.png)
 :::
 
-If canonicalization fails, algebraically correct answers can receive the wrong reward. The practical work is to parse the answer region, strip surface variation, and canonicalize set structure or ordering before verification.
+The above function is many-to-one.
 :::
 
 ## A minimal outcome verifier
