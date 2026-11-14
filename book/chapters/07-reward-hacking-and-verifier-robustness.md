@@ -96,7 +96,7 @@ The clearest quantitative evidence for Goodhart dynamics in optimization comes f
 :::
 
 ::: {.content-visible unless-format="html:js"}
-![](../diagrams/07-gold-proxy-setup-light.png)
+![](../diagrams/07-gold-proxy-setup-light.png){fig-alt="Two pipelines. Real: a labeller produces real comparisons that train the proxy reward model. Synthetic: real comparisons train a gold reward model, which labels synthetic comparisons that train the proxy reward model."}
 :::
 
 In real RLHF, human labellers produce the comparisons that train the proxy reward model. In Gao et al.'s synthetic setup, a large gold reward model, itself trained on real comparisons, labels the comparisons instead, so its score can stand in for ground truth. Redrawn after Gao et al.'s Figure 2 [@gao2023scaling].

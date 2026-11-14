@@ -91,7 +91,7 @@ One single-author audit found that in a 49-task sample of SWE-bench Verified dra
 :::
 
 ::: {.content-visible unless-format="html:js"}
-![](../diagrams/11-impossiblebench-overview.png)
+![](../diagrams/11-impossiblebench-overview.png){fig-alt="An is_prime task with a normal test, assert is_prime(7), and a mutated test, assert not is_prime(7), which a model can only pass by special-casing 7."}
 :::
 
 :::
@@ -148,7 +148,7 @@ The largest systematic datapoint is ScaleRL: a study totaling more than 400,000 
 :::
 
 ::: {.content-visible unless-format="html:js"}
-![](../diagrams/11-scalerl-100k-gpu-hours-light.svg)
+![](../diagrams/11-scalerl-100k-gpu-hours-light.svg){fig-alt="Held-out pass rate against RL training compute on log scales for an 8B dense model and a 17Bx16 mixture-of-experts model, with sigmoid curves fitted to the training points and extrapolations that match the extended training points."}
 :::
 
 Sigmoid curves fitted to the early training points of each run and extrapolated for an 8B dense model and a 17Bx16 mixture-of-experts model. Redrawn from Khatri et al.'s Figure 1 (CC BY 4.0).

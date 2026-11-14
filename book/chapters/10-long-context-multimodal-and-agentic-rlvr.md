@@ -93,7 +93,7 @@ During MiniMax's training, the policy (the M2 model being trained) runs inside a
 :::
 
 ::: {.content-visible unless-format="html:js"}
-![](../diagrams/10-gateway-light.png)
+![](../diagrams/10-gateway-light.png){fig-alt="Many agent harnesses send their requests to one gateway, which forwards them to the model; the model and the training loop feed each other."}
 :::
 
 MiniMax's gateway: many agent harnesses call one model API, and the gateway forwards each call to the policy, returns the answer, and records the exact prompt and response as a training example.
